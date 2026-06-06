@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NavBar</title>
+
+    <style>
+      nav {
+        background: black;
+        padding: 20px;
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+        margin-right: 30px;
+        text-transform: capitalize;
+      }
+
+      .container {
+        display: flex;
+        gap: 20px;
+      }
+
+      .card {
+        padding: 40px;
+        background: lightgreen;
+      }
+
+      .plan {
+        padding: 40px;
+        border: 2px solid black;
+      }
+
+      .pricing {
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Courses</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <div class="container">
+      <div class="card">Users</div>
+      <div class="card">Revenue</div>
+      <div class="card">Orders</div>
+    </div>
+
+    <div class="pricing">
+      <div class="plan">Basic</div>
+      <div class="plan">Premium</div>
+    </div>
+  </body>
+</html>

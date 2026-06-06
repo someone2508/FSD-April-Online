@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Peudo Effect</title>
+
+    <style>
+      .parent {
+        position: relative;
+        display: inline-block;
+      }
+
+      .tooltip {
+        visibility: hidden;
+        background-color: black;
+        color: white;
+        padding: 10px;
+        /* it is used for easy movement of a child */
+        position: absolute;
+        top: 40px;
+      }
+
+      /* when the user hovers the parent, only then shown the tooltip */
+      .parent:hover .tooltip {
+        visibility: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      Hover Me
+
+      <span class="tooltip"> Welcome Student </span>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+body {
+  background: black;
+  color: white;
+  text-align: center;
+}
+
+/* generic styling */
+button {
+  background-color: red;
+  color: white;
+
+  /* all four side same 20px of space */
+  padding: 20px;
+}

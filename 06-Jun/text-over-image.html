@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Text Over Image</title>
+
+    <style>
+      .parent {
+        position: relative;
+      }
+
+      .img-1 {
+        width: 700px;
+        height: 700px;
+      }
+
+      /* target child elements inside the parent using the parent class */
+      .parent h1 {
+        position: absolute;
+        top: 60%;
+        left: 18%;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <img
+        src="https://images.unsplash.com/photo-1777924328355-4c4fcb880f94"
+        alt="Random Scary Image"
+        class="img-1"
+      />
+      <h1>You are under watch!</h1>
+    </div>
+  </body>
+</html>

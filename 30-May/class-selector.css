@@ -1,0 +1,15 @@
+/* .featured {
+  color: red;
+} */
+
+.verified {
+  color: green;
+}
+
+.not-verified {
+  color: gray;
+}
+
+.black-listed {
+  color: red;
+}

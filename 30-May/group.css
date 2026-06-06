@@ -1,0 +1,32 @@
+/* universal selector */
+* {
+  margin: 0;
+  padding: 0;
+  background: black;
+  color: white;
+}
+
+/* h1 {
+  font-family: "Times New Roman", Times, serif;
+}
+
+h2 {
+  font-family: "Times New Roman", Times, serif;
+}
+
+h3 {
+  font-family: "Times New Roman", Times, serif;
+} */
+
+h1,
+h2,
+h3,
+.text {
+  font-family: "Times New Roman", Times, serif;
+}
+
+input,
+textarea,
+select {
+  border: 2px solid black;
+}

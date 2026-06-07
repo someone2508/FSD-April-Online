@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Flexbox</title>
+
+    <style>
+      .container {
+        display: flex;
+      }
+
+      /* apply the css to all the div present in the container class */
+      .container div {
+        /* 
+            1) parent container should take 100% of the available width
+            2) equally divide that width among all the childerens
+        */
+        flex: 1;
+        border: 1px solid black;
+        padding: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>Column 1</div>
+      <div>Column 2</div>
+      <div>Column 3</div>
+      <div>Column 4</div>
+    </div>
+  </body>
+</html>

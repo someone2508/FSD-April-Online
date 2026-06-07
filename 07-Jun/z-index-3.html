@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Layered Images</title>
+
+    <style>
+      .gallery {
+        position: relative;
+        height: 400px;
+      }
+
+      .gallery img {
+        position: absolute;
+        width: 250px;
+      }
+
+      .img1 {
+        left: 100px;
+        z-index: 1;
+      }
+
+      .img2 {
+        left: 150px;
+        top: 40px;
+        z-index: 2;
+      }
+
+      .img3 {
+        left: 200px;
+        top: 80px;
+        z-index: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gallery">
+      <img
+        class="img1"
+        src="https://images.unsplash.com/photo-1777924328355-4c4fcb880f94"
+        alt="photo1"
+      />
+      <img
+        class="img2"
+        src="https://images.unsplash.com/photo-1777924328355-4c4fcb880f94"
+        alt="photo2"
+      />
+      <img
+        class="img3"
+        src="https://images.unsplash.com/photo-1777924328355-4c4fcb880f94"
+        alt="photo3"
+      />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Z-index</title>
+
+    <style>
+      .profile {
+        position: relative;
+        width: 200px;
+      }
+
+      img {
+        width: 200px;
+        height: 200px;
+      }
+
+      .badge {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+
+        width: 40px;
+        height: 40px;
+
+        background: red;
+        color: white;
+
+        border-radius: 50%;
+
+        /* it is used to center the elements horizontally and vertically */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        z-index: 10;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="profile">
+      <img
+        src="https://images.unsplash.com/photo-1777924328355-4c4fcb880f94"
+        alt="some random image"
+      />
+      <div class="badge">9</div>
+
+      <!-- new elements -->
+    </div>
+  </body>
+</html>

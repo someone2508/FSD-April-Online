@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Responsive Design 1</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      nav {
+        background: black;
+        color: white;
+        display: flex;
+
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+      }
+
+      ul {
+        display: flex;
+        /* removing the default styling applied to the ul */
+        list-style: none;
+        gap: 20px;
+      }
+
+      /* mobile 0 - 500 */
+      @media (max-width: 500px) {
+        /* apply this design for 0-500 px of width */
+
+        nav {
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        ul {
+          flex-direction: column;
+          /* vertically centers the items */
+          align-items: center;
+        }
+      }
+
+      /* > 500px tablet */
+      @media (max-width: 900px) {
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <h2>Shopkart</h2>
+
+      <ul>
+        <li>Home</li>
+        <li>Products</li>
+        <li>Services</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+  </body>
+</html>

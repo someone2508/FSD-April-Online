@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Responsive 3</title>
+
+    <style>
+      .dashboard {
+        display: grid;
+
+        grid-template-columns: 250px 1fr;
+
+        /* vh: view height */
+        min-height: 100vh;
+      }
+
+      aside {
+        background: #222;
+        color: white;
+        padding: 20px;
+      }
+
+      main {
+        padding: 20px;
+      }
+
+      @media (max-width: 700px) {
+        .dashboard {
+          grid-template-columns: 1fr;
+        }
+
+        aside {
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- sidebar -->
+      <aside>Sidebar</aside>
+      <!-- main -->
+      <main>Main Content</main>
+    </div>
+  </body>
+</html>

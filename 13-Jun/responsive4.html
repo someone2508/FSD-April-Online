@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+
+    <style>
+      .videos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .video {
+        height: 200px;
+        background: lightgray;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      @media (max-width: 1000px) {
+        .videos {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .videos {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 500px) {
+        .videos {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="videos">
+      <div class="video">Video 1</div>
+      <div class="video">Video 2</div>
+      <div class="video">Video 3</div>
+      <div class="video">Video 4</div>
+      <div class="video">Video 5</div>
+      <div class="video">Video 6</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Responsive 2</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .products {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .card {
+        border: 1px solid gray;
+        padding: 20px;
+      }
+
+      img {
+        /* should take 100% of its parent excluding the padding */
+        width: 100%;
+      }
+
+      /* tablet 2 columns */
+      @media (max-width: 900px) {
+        .products {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      /* phone screen 1 column */
+
+      @media (max-width: 600px) {
+        .products {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="products">
+      <div class="card">
+        <img src="https://picsum.photos/300?1" />
+        <h3>Headphones</h3>
+        <p>999$</p>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/300?2" />
+        <h3>Watch</h3>
+        <p>299$</p>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/300?3" />
+        <h3>Phone</h3>
+        <p>499$</p>
+      </div>
+    </div>
+  </body>
+</html>

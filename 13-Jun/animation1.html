@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Animation 1</title>
+
+    <style>
+      /* button {
+        background: orange;
+        padding: 15px 30px;
+
+        transition: 2s;
+      }
+
+      button:hover {
+        background: red;
+        transform: scale(1.1);
+        color: white;
+      } */
+
+      .slide-button {
+        /* Structural Styles */
+        padding: 14px 28px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        border: 2px solid #0076ff;
+        border-radius: 6px;
+
+        /* The Magic: Create a double-width background gradient */
+        /* Left half (0% to 50%) is the hover color, Right half (50% to 100%) is the initial button color */
+        background-image: linear-gradient(
+          to right,
+          #0076ff 50%,
+          transparent 50%
+        );
+        background-size: 200% 100%;
+
+        /* Position the background so the right half (transparent) shows first */
+        background-position: right bottom;
+
+        /* Text color and smooth transitions */
+        color: #0076ff;
+        transition: all 0.4s ease-out;
+      }
+
+      /* Hover State */
+      .slide-button:hover {
+        /* Pull the left half of the gradient into view */
+        background-position: left bottom;
+
+        /* Flip text color to white so it remains readable against the new background */
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="slide-button">Hover Me</button>
+  </body>
+</html>

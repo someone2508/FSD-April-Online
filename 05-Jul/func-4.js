@@ -13,9 +13,9 @@
 // const func = () => {};
 
 // // arrow function
-// const add2 = (a, b) => {
-//   console.log(a + b);
-// };
+const add2 = (a, b) => {
+  console.log(a + b);
+};
 
 // function staticFunc() {
 //   console.log(10 + 20);
@@ -39,9 +39,9 @@
 //   console.log(num * num);
 // };
 
-// function add(num1, num2) {
-//   return num1 + num2;
-// }
+function add(num1, num2) {
+  return num1 + num2;
+}
 
 // let result = add(10, 20);
 

@@ -80,6 +80,6 @@ div("20a", 10);
 
 type UserId = string;
 
-let userId3: number = 10;
+let userId3: UserId = 10;
 
-let userId4: string = 10;
+let userId4: UserId = 10;

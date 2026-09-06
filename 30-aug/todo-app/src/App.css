@@ -97,3 +97,51 @@
 .delete-button:hover {
   text-decoration: underline;
 }
+
+.todo-footer {
+  margin-top: 24px;
+  padding-top: 20px;
+  border: 1px solid #eee;
+}
+
+.todo-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.filter-buttons button {
+  border: 1px solid #ddd;
+  background-color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.filter-buttons button:hover {
+  background-color: #f5f5f5;
+}
+
+.filter-buttons button.active {
+  background-color: #646cff;
+  color: white;
+  border-color: #646cff;
+}
+
+.clear-button {
+  border: none;
+  background-color: transparent;
+  color: #e53935;
+  cursor: pointer;
+}
+
+.clear-button:hover {
+  text-decoration: underline;
+}

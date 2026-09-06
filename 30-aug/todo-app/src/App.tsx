@@ -1,7 +1,11 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import "./App.css";
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
+
+import type { FilterType } from "./components/TodoFilter";
+import { TodoFilter } from "./components/TodoFilter";
+
 import type { Todo } from "./types/todo";
 
 function App() {
@@ -12,6 +16,10 @@ function App() {
       completed: false,
     },
   ]);
+
+  const [filter, setFilter] = useState<FilterType>("all");
+
+  console.log("Filter : ", filter);
 
   const addTodo = (title: string) => {
     const newTodo: Todo = {
@@ -34,15 +42,32 @@ function App() {
           : todo
       );
     });
-
-    console.log("After toggle");
-    console.log(todos);
   };
 
-  console.log("Todos");
-  console.log(todos);
+  const deleteTodos = (id: number) => {
+    setTodos((currentTodos) => {
+      return currentTodos.filter((eTodo) => eTodo.id !== id);
+    });
+  };
 
   const remainingTodos = todos.filter((todo) => !todo.completed).length;
+
+  const clearComplted = () => {
+    setTodos((currentTodos) => {
+      return currentTodos.filter((todo) => !todo.completed);
+    });
+  };
+
+  const filteredTodos = useMemo(() => {
+    switch (filter) {
+      case "active":
+        return todos.filter((todo) => !todo.completed);
+      case "completed":
+        return todos.filter((todo) => todo.completed);
+      default:
+        return todos;
+    }
+  }, [todos, filter]);
 
   return (
     <div className="app">
@@ -52,7 +77,11 @@ function App() {
         <p className="subtitle">Manage your daily tasks</p>
 
         <TodoForm addTodo={addTodo} />
-        <TodoList todos={todos} toggleTodo={toggleTodo} />
+        <TodoList
+          todos={filteredTodos}
+          toggleTodo={toggleTodo}
+          deleteTodos={deleteTodos}
+        />
 
         <div className="todo-footer">
           <span>
@@ -60,6 +89,11 @@ function App() {
           </span>
 
           {/* todoFilter */}
+          <TodoFilter
+            currentFilter={filter}
+            onClearCompleted={clearComplted}
+            onFilterChange={setFilter}
+          />
         </div>
       </div>
     </div>

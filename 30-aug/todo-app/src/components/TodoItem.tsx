@@ -1,4 +1,4 @@
-function TodoItem({ todo, toggleTodo }) {
+function TodoItem({ todo, toggleTodo, deleteTodos }) {
   return (
     <li className="todo-item">
       <input
@@ -9,7 +9,9 @@ function TodoItem({ todo, toggleTodo }) {
 
       <p className="todo-title">{todo.title}</p>
 
-      <button className="delete-button">Delete</button>
+      <button className="delete-button" onClick={() => deleteTodos(todo.id)}>
+        Delete
+      </button>
     </li>
   );
 }

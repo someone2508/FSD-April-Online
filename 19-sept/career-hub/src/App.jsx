@@ -9,6 +9,7 @@ import { MainLayout } from "./components/MainLayout";
 import { Navbar } from "./components/Navbar";
 import { JobDetails } from "./components/JobDetails";
 import { JobApplied } from "./components/JobApplied";
+import { ApplyJob } from "./components/ApplyJob";
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
         <Route path="/jobs" element={<Jobs />} />
 
         <Route path="/jobs/:id" element={<JobDetails />} />
+
+        <Route path="/jobs/:id/application" element={<ApplyJob />} />
 
         <Route path="/jobs/:id/applied" element={<JobApplied />} />
 

@@ -14,7 +14,7 @@ export function JobDetails() {
   const navigate = useNavigate();
 
   const handleApply = () => {
-    navigate(`/jobs/${job.id}/applied`);
+    navigate(`/jobs/${job.id}/application`);
   };
 
   return (
